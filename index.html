@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A friendly, searchable guide to Finn's Twitch chat commands.">
+  <meta name="theme-color" content="#12101c">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none';">
+  <title>Finn Chat Command Guide</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#command-guide">Skip to the command guide</a>
+
+  <header class="site-header">
+    <div class="header-glow" aria-hidden="true"></div>
+    <div class="shell hero">
+      <nav class="topbar" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Finn Chat Help home">
+          <span class="brand-mark" aria-hidden="true">F</span>
+          <span>Finn Chat Help</span>
+        </a>
+        <a class="nav-link" href="#quick-start">Quick start</a>
+      </nav>
+
+      <div class="hero-copy" id="top">
+        <p class="eyebrow">TWITCH CHAT COMMANDS</p>
+        <h1>Find the right command.<br><span>Get back to the fun.</span></h1>
+        <p class="hero-intro">
+          Search by command, alias, or what you want to do. Every example is
+          ready to paste into Twitch chat.
+        </p>
+
+        <div class="search-panel" role="search">
+          <label for="command-search">Search commands</label>
+          <div class="search-box">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22">
+              <path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"></path>
+            </svg>
+            <input
+              id="command-search"
+              type="search"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="Try “queue”, “quote”, or “!ship”"
+            >
+            <kbd aria-hidden="true">/</kbd>
+          </div>
+          <p class="search-hint">
+            In chat, use <code>!help</code>, <code>!help songs</code>, or
+            <code>!sr help</code>.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-card" aria-label="Quick command example">
+        <p class="hero-card-label">TRY IT IN CHAT</p>
+        <div class="chat-bubble">
+          <span class="chat-name">You</span>
+          <code>!help songs</code>
+        </div>
+        <div class="chat-bubble bot">
+          <span class="chat-name">Finn</span>
+          <span>Songs: request, queue, position, history, and more.</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="command-guide" class="shell">
+    <section class="quick-start" id="quick-start" aria-labelledby="quick-start-title">
+      <div>
+        <p class="section-kicker">START HERE</p>
+        <h2 id="quick-start-title">Three easy ways to get help</h2>
+      </div>
+      <div class="quick-grid">
+        <article>
+          <span class="step">1</span>
+          <h3>Browse topics</h3>
+          <p><code>!help</code> shows the command categories available to you.</p>
+        </article>
+        <article>
+          <span class="step">2</span>
+          <h3>Ask about anything</h3>
+          <p><code>!help queue</code> explains a topic or command by name.</p>
+        </article>
+        <article>
+          <span class="step">3</span>
+          <h3>Ask the command</h3>
+          <p><code>!queue help</code> gives the same focused explanation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-toolbar" aria-labelledby="all-commands-title">
+      <div>
+        <p class="section-kicker">COMMAND DIRECTORY</p>
+        <h2 id="all-commands-title">Everything in one place</h2>
+      </div>
+      <div class="filters" role="group" aria-label="Filter commands by access level">
+        <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-button" type="button" data-filter="everyone" aria-pressed="false">Everyone</button>
+        <button class="filter-button" type="button" data-filter="mod" aria-pressed="false">Moderators</button>
+      </div>
+    </section>
+
+    <p id="result-status" class="result-status" aria-live="polite"></p>
+
+    <div class="command-sections">
+      <section class="command-section" aria-labelledby="everyday-title">
+        <div class="section-heading">
+          <span class="section-icon" aria-hidden="true">01</span>
+          <div>
+            <h2 id="everyday-title">Everyday commands</h2>
+            <p>Finn, stream information, games, and community favorites.</p>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <article class="command-card" id="help" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Everyone</span>
+              <a class="anchor-link" href="#help" aria-label="Link to Help commands">#</a>
+            </div>
+            <h3>Help</h3>
+            <p>Open the topic list or ask about one command directly.</p>
+            <div class="command-list">
+              <code>!help</code>
+              <code>!help &lt;topic or command&gt;</code>
+              <code>&lt;command&gt; help</code>
+            </div>
+          </article>
+
+          <article class="command-card" id="lore" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Everyone</span>
+              <a class="anchor-link" href="#lore" aria-label="Link to Lore commands">#</a>
+            </div>
+            <h3>Finn's memories</h3>
+            <p>See what Finn remembers about you, or another viewer when that option is enabled.</p>
+            <div class="command-list">
+              <code>!lore [@user]</code>
+            </div>
+            <p class="aliases"><strong>Alias:</strong> <code>!memory</code></p>
+          </article>
+
+          <article class="command-card" id="stream" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Everyone</span>
+              <a class="anchor-link" href="#stream" aria-label="Link to Stream commands">#</a>
+            </div>
+            <h3>Stream status</h3>
+            <p>Check how long the stream has been live or view the latest stream summary.</p>
+            <div class="command-list">
+              <code>!uptime</code>
+              <code>!streamstats</code>
+            </div>
+            <p class="aliases"><strong>Alias:</strong> <code>!laststream</code></p>
+          </article>
+
+          <article class="command-card" id="fun" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Everyone</span>
+              <a class="anchor-link" href="#fun" aria-label="Link to Fun commands">#</a>
+            </div>
+            <h3>Fun and games</h3>
+            <dl class="command-details">
+              <div>
+                <dt><code>!8ball &lt;question&gt;</code></dt>
+                <dd>Ask the magic 8-ball.</dd>
+              </div>
+              <div>
+                <dt><code>!ship &lt;user1&gt; [user2]</code></dt>
+                <dd>Get a just-for-fun compatibility score. One name pairs you with them.</dd>
+              </div>
+              <div>
+                <dt><code>!pick &lt;a, b, c&gt;</code></dt>
+                <dd>Let Finn choose. With no options, he picks from recent chatters.</dd>
+              </div>
+              <div>
+                <dt><code>!coinflip</code></dt>
+                <dd>Flip a coin. Alias: <code>!flip</code>.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="command-card" id="shoutouts" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Channel command</span>
+              <a class="anchor-link" href="#shoutouts" aria-label="Link to Shoutout commands">#</a>
+            </div>
+            <h3>Shoutouts</h3>
+            <p>Share another creator's Twitch channel with chat.</p>
+            <div class="command-list">
+              <code>!so &lt;user&gt;</code>
+            </div>
+            <p class="aliases"><strong>Alias:</strong> <code>!shoutout</code></p>
+          </article>
+
+          <article class="command-card" id="custom" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Varies</span>
+              <a class="anchor-link" href="#custom" aria-label="Link to Custom commands">#</a>
+            </div>
+            <h3>Channel-specific commands</h3>
+            <p>
+              The channel may add more commands over time. Use
+              <code>!help custom</code> for the live list available to you.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="command-section" aria-labelledby="quotes-title">
+        <div class="section-heading">
+          <span class="section-icon" aria-hidden="true">02</span>
+          <div>
+            <h2 id="quotes-title">Quotes</h2>
+            <p>Revisit memorable moments or add a new one.</p>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <article class="command-card" id="quotes" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Everyone</span>
+              <a class="anchor-link" href="#quotes" aria-label="Link to Quote commands">#</a>
+            </div>
+            <h3>Find a quote</h3>
+            <dl class="command-details">
+              <div>
+                <dt><code>!quote</code></dt>
+                <dd>Show a random quote.</dd>
+              </div>
+              <div>
+                <dt><code>!quote &lt;number&gt;</code></dt>
+                <dd>Show one quote by number.</dd>
+              </div>
+              <div>
+                <dt><code>!quote latest</code></dt>
+                <dd>Show the newest quote.</dd>
+              </div>
+              <div>
+                <dt><code>!quote count</code></dt>
+                <dd>Count all saved quotes.</dd>
+              </div>
+              <div>
+                <dt><code>!quote search &lt;words&gt;</code></dt>
+                <dd>Find quotes containing those words.</dd>
+              </div>
+              <div>
+                <dt><code>!quote info &lt;number&gt;</code></dt>
+                <dd>See who added it, when, and during which game.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="command-card" id="quote-add" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Permission varies</span>
+              <a class="anchor-link" href="#quote-add" aria-label="Link to Add quote command">#</a>
+            </div>
+            <h3>Add a quote</h3>
+            <p>The channel decides who can add quotes.</p>
+            <div class="command-list">
+              <code>!quote add &lt;text&gt;</code>
+            </div>
+          </article>
+
+          <article class="command-card" id="quote-moderation" data-access="mod">
+            <div class="card-top">
+              <span class="access mod">Moderator</span>
+              <a class="anchor-link" href="#quote-moderation" aria-label="Link to Quote moderation commands">#</a>
+            </div>
+            <h3>Remove a quote</h3>
+            <p>Delete a quote by number. Its old number is not reused.</p>
+            <div class="command-list">
+              <code>!quote remove &lt;number&gt;</code>
+            </div>
+            <p class="aliases"><strong>Aliases:</strong> <code>delete</code>, <code>del</code></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="command-section" aria-labelledby="songs-title">
+        <div class="section-heading">
+          <span class="section-icon" aria-hidden="true">03</span>
+          <div>
+            <h2 id="songs-title">Song requests</h2>
+            <p>Request music, check the queue, and fix the occasional wrong pick.</p>
+          </div>
+        </div>
+
+        <div class="notice">
+          Song requests may be open or closed during a stream. Finn will tell you
+          the current state when you use a request command.
+        </div>
+
+        <div class="card-grid">
+          <article class="command-card featured" id="song-requests" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Everyone*</span>
+              <a class="anchor-link" href="#song-requests" aria-label="Link to Song request commands">#</a>
+            </div>
+            <h3>Request a song</h3>
+            <p>Paste a YouTube link or search by song and artist.</p>
+            <div class="command-list">
+              <code>!sr &lt;link or search&gt;</code>
+            </div>
+            <p class="example"><strong>Example:</strong> <code>!sr Take On Me a-ha</code></p>
+            <p class="aliases">
+              <strong>Aliases:</strong> <code>!songrequest</code>, <code>!songreq</code>
+            </p>
+            <p class="fine-print">*The channel may set a follower, subscriber, VIP, or moderator requirement.</p>
+          </article>
+
+          <article class="command-card" id="music-status" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Everyone</span>
+              <a class="anchor-link" href="#music-status" aria-label="Link to Music status commands">#</a>
+            </div>
+            <h3>Now playing and queue</h3>
+            <dl class="command-details">
+              <div>
+                <dt><code>!current</code></dt>
+                <dd>Current song and requester. Aliases: <code>!song</code>, <code>!nowplaying</code>, <code>!np</code>.</dd>
+              </div>
+              <div>
+                <dt><code>!queue</code></dt>
+                <dd>Queue size and the next few songs. Aliases: <code>!songlist</code>, <code>!sl</code>.</dd>
+              </div>
+              <div>
+                <dt><code>!when [user]</code></dt>
+                <dd>Your position and estimated wait. Aliases: <code>!eta</code>, <code>!wait</code>.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="command-card" id="request-tools" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Everyone</span>
+              <a class="anchor-link" href="#request-tools" aria-label="Link to Song request tools">#</a>
+            </div>
+            <h3>Request tools</h3>
+            <dl class="command-details">
+              <div>
+                <dt><code>!wrongsong</code></dt>
+                <dd>Remove your newest queued request. Aliases: <code>!ws</code>, <code>!oops</code>.</dd>
+              </div>
+              <div>
+                <dt><code>!voteskip</code></dt>
+                <dd>Vote to skip the current song. Alias: <code>!vs</code>.</dd>
+              </div>
+              <div>
+                <dt><code>!replay</code></dt>
+                <dd>Request the previously played song again. Alias: <code>!again</code>.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="command-card" id="song-history" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Everyone</span>
+              <a class="anchor-link" href="#song-history" aria-label="Link to Song history commands">#</a>
+            </div>
+            <h3>Song history and stats</h3>
+            <dl class="command-details">
+              <div>
+                <dt><code>!lastsong</code></dt>
+                <dd>Previously played song. Aliases: <code>!previous</code>, <code>!prev</code>.</dd>
+              </div>
+              <div>
+                <dt><code>!played</code></dt>
+                <dd>Recently played songs. Aliases: <code>!songhistory</code>, <code>!recent</code>.</dd>
+              </div>
+              <div>
+                <dt><code>!songstats [user]</code></dt>
+                <dd>Song totals for this stream and all time. Alias: <code>!srstats</code>.</dd>
+              </div>
+              <div>
+                <dt><code>!srtop</code></dt>
+                <dd>Most-requested songs. Alias: <code>!topsongs</code>.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="command-card" id="song-help" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Everyone</span>
+              <a class="anchor-link" href="#song-help" aria-label="Link to Song help commands">#</a>
+            </div>
+            <h3>Song command help</h3>
+            <div class="command-list">
+              <code>!srhelp</code>
+              <code>!sr help</code>
+            </div>
+            <p class="aliases">
+              <strong>Aliases:</strong> <code>!srcommands</code>, <code>!mediahelp</code>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="command-section" aria-labelledby="dnd-title">
+        <div class="section-heading">
+          <span class="section-icon" aria-hidden="true">04</span>
+          <div>
+            <h2 id="dnd-title">D&amp;D participation</h2>
+            <p>Join an open character pool and roll when you are selected.</p>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <article class="command-card" id="dnd" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Everyone</span>
+              <a class="anchor-link" href="#dnd" aria-label="Link to D and D commands">#</a>
+            </div>
+            <h3>Join a class pool</h3>
+            <div class="command-list">
+              <code>!wizard</code>
+              <code>!barbarian</code>
+              <code>!bard</code>
+            </div>
+            <p>Entries count only while that class's pool is open.</p>
+          </article>
+
+          <article class="command-card" id="roll" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Selected player</span>
+              <a class="anchor-link" href="#roll" aria-label="Link to Roll command">#</a>
+            </div>
+            <h3>Roll a die</h3>
+            <p>Available to the currently selected class performers. It defaults to a d20.</p>
+            <div class="command-list">
+              <code>!roll [d4|d6|d8|d10|d12|d20]</code>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="command-section mod-section" aria-labelledby="moderator-title">
+        <div class="section-heading">
+          <span class="section-icon" aria-hidden="true">05</span>
+          <div>
+            <h2 id="moderator-title">Moderator commands</h2>
+            <p>Playback, community tools, recurring messages, and stream controls.</p>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <article class="command-card" id="media-moderation" data-access="mod">
+            <div class="card-top">
+              <span class="access mod">Moderator</span>
+              <a class="anchor-link" href="#media-moderation" aria-label="Link to Media moderation commands">#</a>
+            </div>
+            <h3>Playback controls</h3>
+            <dl class="command-details compact">
+              <div><dt><code>!skip</code></dt><dd>Skip now. Alias: <code>!skipsong</code>.</dd></div>
+              <div><dt><code>!volume &lt;0-100&gt;</code></dt><dd>Set volume. Alias: <code>!vol</code>.</dd></div>
+              <div><dt><code>!pause</code> / <code>!resume</code></dt><dd>Pause or resume playback.</dd></div>
+              <div><dt><code>!clearqueue</code></dt><dd>Remove queued songs. Alias: <code>!clearsongs</code>.</dd></div>
+              <div><dt><code>!srfallback [on|off|status]</code></dt><dd>Control the filler playlist.</dd></div>
+            </dl>
+          </article>
+
+          <article class="command-card" id="request-moderation" data-access="mod">
+            <div class="card-top">
+              <span class="access mod">Moderator</span>
+              <a class="anchor-link" href="#request-moderation" aria-label="Link to Request moderation commands">#</a>
+            </div>
+            <h3>Request safety</h3>
+            <dl class="command-details compact">
+              <div><dt><code>!srblock</code></dt><dd>Block the current song, a link, channel, or requester.</dd></div>
+              <div><dt><code>!srunblock</code></dt><dd>Remove a song, channel, or requester block.</dd></div>
+              <div><dt><code>!srblocklist</code></dt><dd>Summarize blocks. Alias: <code>!srblocked</code>.</dd></div>
+            </dl>
+            <details>
+              <summary>Show full block syntax</summary>
+              <div class="details-body command-list">
+                <code>!srblock [channel | user &lt;name&gt; | &lt;link&gt;]</code>
+                <code>!srunblock [user &lt;name&gt; | channel &lt;name&gt; | &lt;link&gt;]</code>
+              </div>
+            </details>
+          </article>
+
+          <article class="command-card" id="auto-shoutout" data-access="mod">
+            <div class="card-top">
+              <span class="access mod">Moderator</span>
+              <a class="anchor-link" href="#auto-shoutout" aria-label="Link to Automatic shoutout commands">#</a>
+            </div>
+            <h3>Automatic shoutouts</h3>
+            <dl class="command-details compact">
+              <div><dt><code>!autoshoutout [status]</code></dt><dd>Show current state and counts. The bare command also shows status.</dd></div>
+              <div><dt><code>!autoshoutout reset</code></dt><dd>Allow regulars to be greeted again.</dd></div>
+              <div><dt><code>!autoshoutout test &lt;user&gt;</code></dt><dd>Post a sample shoutout.</dd></div>
+            </dl>
+            <p class="aliases"><strong>Alias:</strong> <code>!autoso</code></p>
+          </article>
+
+          <article class="command-card wide" id="command-management" data-access="mod">
+            <div class="card-top">
+              <span class="access mod">Moderator</span>
+              <a class="anchor-link" href="#command-management" aria-label="Link to Custom command management">#</a>
+            </div>
+            <h3>Manage channel commands</h3>
+            <p>Use <code>!commands help &lt;action&gt;</code> for focused syntax in chat.</p>
+            <div class="subcommand-grid">
+              <div><code>!commands [list]</code><span>List commands</span></div>
+              <div><code>!commands info &lt;name&gt;</code><span>Show settings</span></div>
+              <div><code>!commands add &lt;name&gt; &lt;reply&gt;</code><span>Create</span></div>
+              <div><code>!commands edit &lt;name&gt; &lt;reply&gt;</code><span>Change reply</span></div>
+              <div><code>!commands remove &lt;name&gt;</code><span>Delete</span></div>
+              <div><code>!commands enable|disable &lt;name&gt;</code><span>Toggle</span></div>
+              <div><code>!commands cooldown &lt;name&gt; &lt;seconds&gt;</code><span>Channel cooldown</span></div>
+              <div><code>!commands usercooldown &lt;name&gt; &lt;seconds&gt;</code><span>Per-user cooldown</span></div>
+              <div><code>!commands modbypass &lt;name&gt; &lt;on|off|default&gt;</code><span>Cooldown bypass</span></div>
+              <div><code>!commands userlevel &lt;name&gt; &lt;level&gt;</code><span>Minimum access</span></div>
+              <div><code>!commands replytype &lt;name&gt; &lt;say|mention|reply&gt;</code><span>Reply style</span></div>
+              <div><code>!commands alias add|remove &lt;name&gt; &lt;alias&gt;</code><span>Manage aliases</span></div>
+              <div><code>!commands keyword add|remove &lt;name&gt; &lt;phrase&gt;</code><span>Manage phrase triggers</span></div>
+              <div><code>!commands counter get|set &lt;name&gt; [value]</code><span>Manage counters</span></div>
+            </div>
+            <details>
+              <summary>Show shorter action aliases</summary>
+              <div class="details-body">
+                <p><code>remove</code>: <code>rm</code>, <code>delete</code></p>
+                <p><code>cooldown</code>: <code>cd</code></p>
+                <p><code>usercooldown</code>: <code>ucd</code>, <code>usercd</code></p>
+                <p><code>modbypass</code>: <code>modskip</code></p>
+                <p><code>userlevel</code>: <code>level</code></p>
+                <p><code>replytype</code>: <code>reply</code></p>
+                <p><code>alias</code>: <code>aliases</code></p>
+                <p><code>keyword</code>: <code>keywords</code></p>
+                <p><code>counter</code>: <code>counters</code></p>
+                <p>Inside <code>alias</code> and <code>keyword</code>, <code>remove</code> also accepts <code>rm</code>.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="command-card wide" id="timers" data-access="mod">
+            <div class="card-top">
+              <span class="access mod">Moderator</span>
+              <a class="anchor-link" href="#timers" aria-label="Link to Timer management commands">#</a>
+            </div>
+            <h3>Manage recurring messages</h3>
+            <p>Use <code>!timers help &lt;action&gt;</code> for focused syntax in chat.</p>
+            <div class="subcommand-grid">
+              <div><code>!timers [list]</code><span>List timers</span></div>
+              <div><code>!timers info &lt;name&gt;</code><span>Show settings</span></div>
+              <div><code>!timers add &lt;name&gt; &lt;message&gt;</code><span>Create</span></div>
+              <div><code>!timers edit &lt;name&gt; &lt;message&gt;</code><span>Change message</span></div>
+              <div><code>!timers remove &lt;name&gt;</code><span>Delete</span></div>
+              <div><code>!timers enable|disable &lt;name&gt;</code><span>Toggle</span></div>
+              <div><code>!timers interval &lt;name&gt; &lt;minutes&gt;</code><span>Set frequency</span></div>
+              <div><code>!timers minlines &lt;name&gt; &lt;count&gt;</code><span>Require chat activity</span></div>
+              <div><code>!timers command &lt;name&gt; &lt;command|none&gt;</code><span>Mirror a command</span></div>
+            </div>
+            <details>
+              <summary>Show shorter action aliases</summary>
+              <div class="details-body">
+                <p><code>remove</code>: <code>rm</code>, <code>delete</code></p>
+                <p><code>interval</code>: <code>int</code></p>
+                <p><code>minlines</code>: <code>minline</code></p>
+                <p><code>command</code>: <code>cmd</code></p>
+                <p>To stop mirroring a command, use <code>none</code>, <code>off</code>, <code>clear</code>, or <code>message</code>.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="command-card wide" id="stream-tools" data-access="mod">
+            <div class="card-top">
+              <span class="access mod">Moderator</span>
+              <a class="anchor-link" href="#stream-tools" aria-label="Link to Stream management commands">#</a>
+            </div>
+            <h3>Finn memory and stream phase</h3>
+            <div class="subcommand-grid">
+              <div><code>!pin &lt;@user|topic:name&gt; &lt;category&gt; &lt;fact&gt;</code><span>Save an important fact</span></div>
+              <div><code>!unpin &lt;fact-id&gt;</code><span>Let a fact age normally</span></div>
+              <div><code>!promote &lt;fact-id&gt; &lt;canonical text&gt;</code><span>Mark established lore</span></div>
+              <div><code>!demote &lt;fact-id&gt;</code><span>Return lore to an observation</span></div>
+              <div><code>!phase [name|next|list]</code><span>View or change the stream phase</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section class="troubleshooting" id="troubleshooting" aria-labelledby="troubleshooting-title">
+      <div>
+        <p class="section-kicker">QUICK CHECK</p>
+        <h2 id="troubleshooting-title">No reply?</h2>
+      </div>
+      <ul>
+        <li>The feature may be turned off for this stream.</li>
+        <li>A cooldown may still be running.</li>
+        <li>The command may need a subscriber, VIP, moderator, or broadcaster.</li>
+        <li>A channel-specific command may use the same name.</li>
+        <li>Try <code>!help &lt;command&gt;</code> to see the current guidance.</li>
+      </ul>
+    </section>
+
+    <section class="no-results" id="no-results" hidden>
+      <h2>No matching commands</h2>
+      <p>Try a shorter word, an alias, or clear the current filters.</p>
+      <button id="clear-search" type="button">Clear search and filters</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <div>
+        <strong>Finn Chat Help</strong>
+        <p>A friendly guide for stream chat.</p>
+      </div>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>
