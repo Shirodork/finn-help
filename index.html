@@ -44,7 +44,7 @@
               type="search"
               autocomplete="off"
               spellcheck="false"
-              placeholder="Try “queue”, “quote”, or “!ship”"
+              placeholder="Try “queue”, “points”, or “!ship”"
             >
             <kbd aria-hidden="true">/</kbd>
           </div>
@@ -184,6 +184,25 @@
                 <dd>Flip a coin. Alias: <code>!flip</code>.</dd>
               </div>
             </dl>
+          </article>
+
+          <article class="command-card" id="loyalty-points" data-access="everyone">
+            <div class="card-top">
+              <span class="access everyone">Everyone</span>
+              <a class="anchor-link" href="#loyalty-points" aria-label="Link to Loyalty point commands">#</a>
+            </div>
+            <h3>Loyalty points</h3>
+            <dl class="command-details">
+              <div>
+                <dt><code>!points [@viewer]</code></dt>
+                <dd>Show your balance, or another viewer's when public lookups are enabled. Alias: <code>!balance</code>.</dd>
+              </div>
+              <div>
+                <dt><code>!leaderboard</code></dt>
+                <dd>Show the channel's current top point balances.</dd>
+              </div>
+            </dl>
+            <p class="fine-print">Finn awards occasional eligible chat activity only while the stream is confirmed live. Commands, configured bot accounts, offline messages, and rapid repeats do not earn. Silent lurking is not counted as watch time.</p>
           </article>
 
           <article class="command-card" id="shoutouts" data-access="everyone">
