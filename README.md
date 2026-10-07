@@ -43,6 +43,7 @@ Keep the voice page's version label aligned with shipped Finn commands. Voice
 examples are never viewer-chat commands. Explain independent permissions,
 arming, confirmation and interpretation-only testing without publishing runtime
 state, private configuration, dashboard/token URLs, transcripts or hidden
-operator capabilities. Clearly separate planned follow-ups/multiple commands
-from available controls. The voice page is static and reuses `styles.css`; it
+operator capabilities. Clearly separate optional conversational follow-ups from
+action permissions, and planned multiple commands from available controls. The
+voice page is static and reuses `styles.css`; it
 does not need the chat search script or external services.
