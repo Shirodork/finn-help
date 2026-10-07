@@ -43,7 +43,7 @@
       <h2 id="before-use-title">Enable deliberately. Arm separately.</h2>
       <div class="quick-grid">
         <article><span class="step">1</span><h3>Check the microphone</h3><p>Use the updated, authenticated operator microphone. Begin with “Hey Finn” or the channel's configured wake phrase. A normal question still uses ordinary conversation.</p></article>
-        <article><span class="step">2</span><h3>Choose permissions and arm</h3><p>Voice controls and optional bookmark, song-skip, playback and quiet permissions must be enabled separately in the private dashboard. Enabling does not arm anything; explicitly arm the current microphone session.</p></article>
+        <article><span class="step">2</span><h3>Choose permissions and arm</h3><p>Open the private dashboard's Voice Controls tab. Voice controls and optional bookmark, song-skip, playback and quiet permissions must be enabled separately. Enabling does not arm anything; explicitly arm the current microphone session.</p></article>
         <article><span class="step">3</span><h3>Respect confirmation</h3><p>Night Sky changes and enabled media/quiet actions use the configured second-confirmation preference. Bookmarks are immediate and skip only that extra confirmation.</p></article>
         <article><span class="step">4</span><h3>Protect the room</h3><p>Authentication identifies the microphone, not the speaker. Anyone audible to an armed mic may request a supported action. Use isolated audio/headphones and disarm outside intentional use.</p></article>
       </div>
@@ -85,7 +85,8 @@
         </article>
         <article class="command-card" id="dashboard">
           <h3>Use the private dashboard</h3>
-          <p>Check action status, permission, arming and pending proposals. The quiet countdown has a clear-only “Resume Finn comments” button usable without arming.</p>
+          <p>The dedicated Voice Controls tab brings together action status, permissions, arming, pending proposals, phrase tests and searchable command help. The quiet countdown has a clear-only “Resume Finn comments” button usable without arming.</p>
+          <p>Night Sky Protocol reward, music and OBS setup stays in Night Sky. Use the shortcuts between the two tabs; changing tabs never enables, arms or executes an action.</p>
           <p>Disarming alone leaves an accepted quiet timer intact. Quiet expiry, resume, disabling its permission, stream end, a new session or restart clears it without replaying old comments.</p>
           <p class="fine-print">Media and quiet proposals expire within the original 30-second completed-request window; later interpretation or confirmation cannot extend it. Check status rather than treating a slow HTTP reply as success or failure.</p>
         </article>
@@ -95,7 +96,7 @@
     <section class="command-section" id="testing" aria-labelledby="testing-title">
       <div class="section-heading"><span class="section-icon" aria-hidden="true">02</span><div><h2 id="testing-title">Test safely</h2><p>Typed interpretation and a real microphone are different checks.</p></div></div>
       <div class="card-grid">
-        <article class="command-card"><h3>Free phrase tester</h3><p>The private “Test phrase” panel interprets typed wording only. It cannot arm, stage, confirm, capture a playback target or run an action. It is not a microphone test.</p><p class="fine-print">Enter the request after the wake phrase. Temporary test input and evidence clear when the panel is hidden.</p></article>
+        <article class="command-card"><h3>Free phrase tester</h3><p>In Voice Controls, open “Try a phrase.” The private “Test phrase” panel interprets typed wording only. It cannot arm, stage, confirm, capture a playback target or run an action. It is not a microphone test.</p><p class="fine-print">Enter the request after the wake phrase. Temporary test input and evidence clear when you leave or hide the tab. Switching back never arms anything automatically.</p></article>
         <article class="command-card"><h3>Optional AI preview</h3><p>“Preview with AI” is a separate explicit interpretation test and may use tokens. It still cannot execute or capture targets. Familiar exact commands use the free grammar; transcription and wake-address checks can still have their usual costs.</p><p class="fine-print">Enabled natural interpretation may classify ordinary addressed turns when optional actions are permitted, adding bounded latency/tokens before a normal reply.</p></article>
         <article class="command-card"><h3>Real microphone check</h3><p>Only arm when changes are intended. Make one supported request, check its proposal/result and the actual state, then disarm. Authorized testing modes are not action dry runs.</p><p class="fine-print">A browser completion report does not prove audio reached the OBS mixer or headphones. Delivery-receipt updates add no new spoken commands.</p></article>
       </div>
