@@ -26,8 +26,8 @@
         <p class="eyebrow">STREAMER / OPERATOR MICROPHONE</p>
         <h1>Say it to Finn.<br><span>Know what changes.</span></h1>
         <p class="hero-intro">These are spoken operator requests, not Twitch chat commands. Viewers cannot run them by pasting the examples into chat.</p>
-        <p class="search-hint">Updated 7 October 2026 · Commands through the merged music/quiet release (#250). Deployment and permissions may differ on each channel.</p>
-        <p><a href="#before-use">Before using controls</a> · <a href="#commands">What can I say?</a> · <a href="#testing">Test safely</a></p>
+        <p class="search-hint">Updated 7 October 2026 · Includes optional, bounded conversational follow-ups. Deployment and permissions may differ on each channel.</p>
+        <p><a href="#before-use">Before using controls</a> · <a href="#commands">What can I say?</a> · <a href="#follow-ups">Keep talking</a> · <a href="#testing">Test safely</a></p>
       </div>
       <div class="hero-card" aria-label="Voice request example">
         <p class="hero-card-label">ONE REQUEST AT A TIME</p>
@@ -63,7 +63,7 @@
           <h3>Confirm or cancel</h3>
           <div class="command-list"><code>Hey Finn, confirm that.</code><code>Hey Finn, cancel that.</code></div>
           <p>Confirm only the current unexpired proposal. Cancel pending or unstarted work; it is not rollback for a change already sent. Existing “confirm night sky” and “cancel night sky” wording remains supported.</p>
-          <p class="fine-print">Use a fresh wake for confirmation or a full corrected request. Bare “yes,” “on” or “off” is not a supported follow-up.</p>
+          <p class="fine-print">Use a fresh wake for confirmation or a full corrected request. Bare “yes,” “on” or “off” cannot confirm a proposal or change a setting through the conversational window.</p>
         </article>
         <article class="command-card" id="bookmarks">
           <h3>Private stream bookmarks</h3>
@@ -93,19 +93,49 @@
       </div>
     </section>
 
+    <section class="command-section" id="follow-ups" aria-labelledby="follow-ups-title">
+      <div class="section-heading"><span class="section-icon" aria-hidden="true">02</span><div><h2 id="follow-ups-title">Keep the conversation flowing.</h2><p>A short, optional chance to reply without repeating “Hey Finn.”</p></div></div>
+      <div class="notice">Follow-up conversation is OFF by default and separate from operator actions. Enabling it does not arm controls or open the microphone window immediately.</div>
+      <div class="card-grid">
+        <article class="command-card" id="follow-up-start">
+          <h3>Enable the separate switch</h3>
+          <p>In the private dashboard's Voice Controls tab, use “Enable follow-up listening.” No action arm is needed for ordinary conversation. Begin with a deliberate “Hey Finn” question.</p>
+          <p class="fine-print">Requires the updated, authenticated microphone client, with the operator's shared server token configured. Refresh Finn's OBS browser source after updating so its current playback reports are available. Older clients still need the wake phrase for each question.</p>
+        </article>
+        <article class="command-card" id="follow-up-window">
+          <h3>Six usable listening seconds</h3>
+          <div class="command-list"><code>Hey Finn, what do you think of these colors?</code><code>And what about the blue ones?</code></div>
+          <p>The window opens only after Finn's direct spoken answer naturally finishes, echo protection settles and the microphone is ready. The dashboard shows “Follow-up available” with a countdown. Begin speaking before it ends; a verified in-window utterance may finish afterward, within the recording limit.</p>
+          <p class="fine-print">No window follows unsolicited comments, operator-action acknowledgements, skipped/failed replies or text-only answers. Other Finn, Maple or DnD speech closes the opportunity. This is not interrupting Finn while he talks.</p>
+        </article>
+        <article class="command-card" id="follow-up-actions">
+          <h3>Conversation only</h3>
+          <p>Ask another question or keep bantering. To change Night Sky, music or quiet settings, save a bookmark, or confirm an action, say a fresh “Hey Finn” and follow the usual permission, arming and confirmation rules.</p>
+          <p class="fine-print">An action-shaped follow-up gets a reminder to use the wake phrase, not permission to act. Authentication identifies the microphone, not who is speaking; room or chat-directed speech during the window can be mistaken for a follow-up. Use isolated audio/headphones and disable the feature if it gets in the way.</p>
+        </article>
+        <article class="command-card" id="follow-up-end">
+          <h3>Finish when you want</h3>
+          <div class="command-list"><code>That's all.</code><code>Thanks, that's all.</code></div>
+          <p>Those phrases close an open conversation locally, without another model reply. Or use “End conversation” in Voice Controls; it does not need action arming. F11/privacy mute, microphone disconnect, Stop/Clear, history/persona/lifecycle changes or disabling follow-ups also end further listening.</p>
+          <p class="fine-print">Defaults: six seconds per window, at most three follow-up turns and 180 seconds overall. These limits are configurable. Expiry or End conversation does not cut off a valid reply already playing. A new deliberate wake begins a fresh exchange.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="command-section" id="testing" aria-labelledby="testing-title">
-      <div class="section-heading"><span class="section-icon" aria-hidden="true">02</span><div><h2 id="testing-title">Test safely</h2><p>Typed interpretation and a real microphone are different checks.</p></div></div>
+      <div class="section-heading"><span class="section-icon" aria-hidden="true">03</span><div><h2 id="testing-title">Test safely</h2><p>Typed interpretation and a real microphone are different checks.</p></div></div>
       <div class="card-grid">
         <article class="command-card"><h3>Free phrase tester</h3><p>In Voice Controls, open “Try a phrase.” The private “Test phrase” panel interprets typed wording only. It cannot arm, stage, confirm, capture a playback target or run an action. It is not a microphone test.</p><p class="fine-print">Enter the request after the wake phrase. Temporary test input and evidence clear when you leave or hide the tab. Switching back never arms anything automatically.</p></article>
         <article class="command-card"><h3>Optional AI preview</h3><p>“Preview with AI” is a separate explicit interpretation test and may use tokens. It still cannot execute or capture targets. Familiar exact commands use the free grammar; transcription and wake-address checks can still have their usual costs.</p><p class="fine-print">Enabled natural interpretation may classify ordinary addressed turns when optional actions are permitted, adding bounded latency/tokens before a normal reply.</p></article>
         <article class="command-card"><h3>Real microphone check</h3><p>Only arm when changes are intended. Make one supported request, check its proposal/result and the actual state, then disarm. Authorized testing modes are not action dry runs.</p><p class="fine-print">A browser completion report does not prove audio reached the OBS mixer or headphones. Delivery-receipt updates add no new spoken commands.</p></article>
+        <article class="command-card"><h3>Follow-up rehearsal</h3><p>With the separate follow-up switch enabled, ask a normal question. Wait for Finn's answer and the dashboard's available countdown, then ask one conversational follow-up. End the conversation or press F11 to check the privacy boundary.</p><p class="fine-print">The phrase tester cannot test listening-window timing, speech onset, echo protection or actual OBS/microphone readiness. Those need a deliberate real-audio check.</p></article>
       </div>
     </section>
 
     <section class="troubleshooting" aria-labelledby="limits-title">
       <div><p class="section-kicker">LIMITS</p><h2 id="limits-title">Still use a fresh wake.</h2></div>
       <ul>
-        <li>Automatic wake-free follow-ups are not available yet.</li>
+        <li>Wake-free follow-ups are optional conversation only. Commands, confirmation and bookmarks still need a fresh wake.</li>
         <li>Multiple commands in one request are not supported. Say them separately.</li>
         <li>Spoken “what can I say?” help is planned, not a shipped control command.</li>
         <li>No arbitrary player URLs, volume/seek controls, shell commands or general model tools are authorized by these requests.</li>
