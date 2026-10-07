@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Finn's streamer/operator microphone controls: what to say, confirmation, privacy, and safe testing.">
+  <meta name="theme-color" content="#12101c">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none';">
+  <title>Finn Operator Voice Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#voice-guide">Skip to the voice guide</a>
+  <header class="site-header">
+    <div class="header-glow" aria-hidden="true"></div>
+    <div class="shell hero">
+      <nav class="topbar" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="Finn Chat Help home">
+          <span class="brand-mark" aria-hidden="true">F</span>
+          <span>Finn Chat Help</span>
+        </a>
+        <a class="nav-link" href="index.html">Back to chat commands</a>
+      </nav>
+      <div class="hero-copy" id="top">
+        <p class="eyebrow">STREAMER / OPERATOR MICROPHONE</p>
+        <h1>Say it to Finn.<br><span>Know what changes.</span></h1>
+        <p class="hero-intro">These are spoken operator requests, not Twitch chat commands. Viewers cannot run them by pasting the examples into chat.</p>
+        <p class="search-hint">Updated 7 October 2026 · Commands through the merged music/quiet release (#250). Deployment and permissions may differ on each channel.</p>
+        <p><a href="#before-use">Before using controls</a> · <a href="#commands">What can I say?</a> · <a href="#testing">Test safely</a></p>
+      </div>
+      <div class="hero-card" aria-label="Voice request example">
+        <p class="hero-card-label">ONE REQUEST AT A TIME</p>
+        <div class="chat-bubble"><span class="chat-name">Operator says</span><code>Hey Finn, pause the music.</code></div>
+        <div class="chat-bubble bot"><span class="chat-name">If confirmation is enabled</span><span>Wait for the proposal, then say “Hey Finn, confirm that.”</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="voice-guide" class="shell">
+    <section class="quick-start" id="before-use" aria-labelledby="before-use-title">
+      <p class="section-kicker">BEFORE USING CONTROLS</p>
+      <h2 id="before-use-title">Enable deliberately. Arm separately.</h2>
+      <div class="quick-grid">
+        <article><span class="step">1</span><h3>Check the microphone</h3><p>Use the updated, authenticated operator microphone. Begin with “Hey Finn” or the channel's configured wake phrase. A normal question still uses ordinary conversation.</p></article>
+        <article><span class="step">2</span><h3>Choose permissions and arm</h3><p>Voice controls and optional bookmark, song-skip, playback and quiet permissions must be enabled separately in the private dashboard. Enabling does not arm anything; explicitly arm the current microphone session.</p></article>
+        <article><span class="step">3</span><h3>Respect confirmation</h3><p>Night Sky changes and enabled media/quiet actions use the configured second-confirmation preference. Bookmarks are immediate and skip only that extra confirmation.</p></article>
+        <article><span class="step">4</span><h3>Protect the room</h3><p>Authentication identifies the microphone, not the speaker. Anyone audible to an armed mic may request a supported action. Use isolated audio/headphones and disarm outside intentional use.</p></article>
+      </div>
+    </section>
+
+    <section class="command-section" id="commands" aria-labelledby="commands-title">
+      <div class="section-heading"><span class="section-icon" aria-hidden="true">01</span><div><h2 id="commands-title">What can I say?</h2><p>One clear request after the wake phrase. Wait for Finn to finish speaking before replying.</p></div></div>
+      <div class="notice">These are supported commands in the released code, not a promise that a channel has deployed or enabled them. Spoken controls retain arming, lifecycle and action-specific safety checks.</div>
+      <div class="card-grid">
+        <article class="command-card" id="night-sky">
+          <h3>Night Sky Protocol</h3>
+          <div class="command-list"><code>Hey Finn, activate night sky protocol.</code><code>Hey Finn, end night sky protocol.</code><code>Hey Finn, night sky protocol status.</code></div>
+          <p>Start or end the configured Protocol using the operator's confirmation preference. Status reports without changing it; spoken status still requires arming.</p>
+          <p class="fine-print">“Hey Finn, could you please activate Night Sky Protocol for me?” is also supported. Optional AI interpretation can help with other wording, but does not grant permission or execute arbitrary tools.</p>
+        </article>
+        <article class="command-card" id="confirm-cancel">
+          <h3>Confirm or cancel</h3>
+          <div class="command-list"><code>Hey Finn, confirm that.</code><code>Hey Finn, cancel that.</code></div>
+          <p>Confirm only the current unexpired proposal. Cancel pending or unstarted work; it is not rollback for a change already sent. Existing “confirm night sky” and “cancel night sky” wording remains supported.</p>
+          <p class="fine-print">Use a fresh wake for confirmation or a full corrected request. Bare “yes,” “on” or “off” is not a supported follow-up.</p>
+        </article>
+        <article class="command-card" id="bookmarks">
+          <h3>Private stream bookmarks</h3>
+          <div class="command-list"><code>Hey Finn, bookmark that.</code><code>Hey Finn, bookmark that: the project is finished.</code></div>
+          <p>With bookmark permission and arming, save a private Scrapbook moment immediately during a real active stream. The optional note stays private and is not read aloud in the acknowledgement.</p>
+          <p class="fine-print">The timestamp is when the completed request is admitted, not an inferred earlier highlight. An uncertain save may offer an explicit same-bookmark retry for the original short window; after expiry or restart, inspect Scrapbook. No automatic retry.</p>
+        </article>
+        <article class="command-card" id="media">
+          <h3>Skip, pause or resume music</h3>
+          <div class="command-list"><code>Hey Finn, skip this song.</code><code>Hey Finn, pause the music.</code><code>Hey Finn, resume the music.</code></div>
+          <p>Song skip and playback each need their own permission. These requests use configured confirmation and target the original captured media occurrence, never a replacement song.</p>
+          <p class="fine-print">During Night Sky, only ambient music changes; the held normal song and viewer queue remain untouched. Acceptance is not proof of audible playback. Check the media dashboard on uncertainty before making a fresh request; there is no automatic retry.</p>
+        </article>
+        <article class="command-card" id="quiet">
+          <h3>Temporarily quiet Finn comments</h3>
+          <div class="command-list"><code>Hey Finn, stay quiet for five minutes.</code><code>Hey Finn, resume your comments.</code></div>
+          <p>With quiet permission and configured confirmation, suppress Finn's unsolicited comments for 1–60 whole minutes. Bare “stay quiet” means five minutes. A new accepted request replaces the deadline from now, rather than adding time.</p>
+          <p class="fine-print">Direct answers, other speakers, music, notifications, maintenance and requested performances remain available. Already-playing speech may finish. Resume clears only temporary quiet; it never enables saved autonomy.</p>
+        </article>
+        <article class="command-card" id="dashboard">
+          <h3>Use the private dashboard</h3>
+          <p>Check action status, permission, arming and pending proposals. The quiet countdown has a clear-only “Resume Finn comments” button usable without arming.</p>
+          <p>Disarming alone leaves an accepted quiet timer intact. Quiet expiry, resume, disabling its permission, stream end, a new session or restart clears it without replaying old comments.</p>
+          <p class="fine-print">Media and quiet proposals expire within the original 30-second completed-request window; later interpretation or confirmation cannot extend it. Check status rather than treating a slow HTTP reply as success or failure.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="command-section" id="testing" aria-labelledby="testing-title">
+      <div class="section-heading"><span class="section-icon" aria-hidden="true">02</span><div><h2 id="testing-title">Test safely</h2><p>Typed interpretation and a real microphone are different checks.</p></div></div>
+      <div class="card-grid">
+        <article class="command-card"><h3>Free phrase tester</h3><p>The private “Test phrase” panel interprets typed wording only. It cannot arm, stage, confirm, capture a playback target or run an action. It is not a microphone test.</p><p class="fine-print">Enter the request after the wake phrase. Temporary test input and evidence clear when the panel is hidden.</p></article>
+        <article class="command-card"><h3>Optional AI preview</h3><p>“Preview with AI” is a separate explicit interpretation test and may use tokens. It still cannot execute or capture targets. Familiar exact commands use the free grammar; transcription and wake-address checks can still have their usual costs.</p><p class="fine-print">Enabled natural interpretation may classify ordinary addressed turns when optional actions are permitted, adding bounded latency/tokens before a normal reply.</p></article>
+        <article class="command-card"><h3>Real microphone check</h3><p>Only arm when changes are intended. Make one supported request, check its proposal/result and the actual state, then disarm. Authorized testing modes are not action dry runs.</p><p class="fine-print">A browser completion report does not prove audio reached the OBS mixer or headphones. Delivery-receipt updates add no new spoken commands.</p></article>
+      </div>
+    </section>
+
+    <section class="troubleshooting" aria-labelledby="limits-title">
+      <div><p class="section-kicker">LIMITS</p><h2 id="limits-title">Still use a fresh wake.</h2></div>
+      <ul>
+        <li>Automatic wake-free follow-ups are not available yet.</li>
+        <li>Multiple commands in one request are not supported. Say them separately.</li>
+        <li>Spoken “what can I say?” help is planned, not a shipped control command.</li>
+        <li>No arbitrary player URLs, volume/seek controls, shell commands or general model tools are authorized by these requests.</li>
+        <li>On ambiguity, restate the full request with “Hey Finn.” On uncertainty, check the relevant dashboard before trying again.</li>
+      </ul>
+    </section>
+  </main>
+  <footer><div class="shell footer-inner"><div><strong>Finn Operator Voice Guide</strong><p>Public command reference. No private dashboard access or runtime status.</p></div><a href="index.html">Back to chat commands</a></div></footer>
+</body>
+</html>
