@@ -26,8 +26,8 @@
         <p class="eyebrow">STREAMER / OPERATOR MICROPHONE</p>
         <h1>Say it to Finn.<br><span>Know what changes.</span></h1>
         <p class="hero-intro">These are spoken operator requests, not Twitch chat commands. Viewers cannot run them by pasting the examples into chat.</p>
-        <p class="search-hint">Updated 7 October 2026 · Includes optional, bounded conversational follow-ups. Deployment and permissions may differ on each channel.</p>
-        <p><a href="#before-use">Before using controls</a> · <a href="#commands">What can I say?</a> · <a href="#follow-ups">Keep talking</a> · <a href="#testing">Test safely</a></p>
+        <p class="search-hint">Updated 8 October 2026 · Includes optional conversation and separate Night Sky on/off clarification. Deployment and permissions may differ on each channel.</p>
+        <p><a href="#before-use">Before using controls</a> · <a href="#commands">What can I say?</a> · <a href="#follow-ups">Keep talking</a> · <a href="#clarification">Answer a choice</a> · <a href="#testing">Test safely</a></p>
       </div>
       <div class="hero-card" aria-label="Voice request example">
         <p class="hero-card-label">ONE REQUEST AT A TIME</p>
@@ -122,8 +122,31 @@
       </div>
     </section>
 
+    <section class="command-section" id="clarification" aria-labelledby="clarification-title">
+      <div class="section-heading"><span class="section-icon" aria-hidden="true">03</span><div><h2 id="clarification-title">Answer the choice Finn offered.</h2><p>One short answer to one Night Sky question—not a new command.</p></div></div>
+      <div class="notice">Scoped clarification is OFF by default and independent of follow-up conversation. Enable it separately in Voice Controls. Operator controls must be armed and natural interpretation enabled.</div>
+      <div class="card-grid">
+        <article class="command-card" id="clarification-choice">
+          <h3>Wait for the question to finish</h3>
+          <div class="command-list"><code>Hey Finn, Night Sky?</code><code>On, please.</code></div>
+          <p>If Finn safely understands that you mean Night Sky but not whether to start or end it, he may ask “Do you want Night Sky on or off?” Wait for the separate answer countdown, then say “on” or “off.” Optional “please” is fine.</p>
+          <p class="fine-print">The window opens only after that exact question naturally finishes, echo protection settles and the authenticated microphone is ready. Default: six seconds to begin. A skipped, failed or unheard question never opens one.</p>
+        </article>
+        <article class="command-card" id="clarification-confirm">
+          <h3>A choice is not confirmation</h3>
+          <p>With confirmation enabled, choosing “on” selects the original request but does not start Night Sky. Use a fresh “Hey Finn, confirm Night Sky” when prompted. With the operator's explicit no-confirmation mode, a valid choice may apply that original request.</p>
+          <p class="fine-print">The original 30-second completed-request deadline caps the question, answer and confirmation. It never restarts when you answer. Generic “yes,” new commands, conflicting answers and multiple actions are not accepted choices.</p>
+        </article>
+        <article class="command-card" id="clarification-end">
+          <h3>One answer, then move on</h3>
+          <p>One complete answer consumes the opportunity. Invalid or expired answers need a fresh full request. “Cancel clarification” closes it without arming, confirming or undoing an action already started.</p>
+          <p class="fine-print">Privacy mute, Stop/Clear, microphone or lifecycle changes, other co-host speech and a new “Hey Finn” close the old offer. This first feature handles Night Sky on/off only. Ordinary conversational follow-ups still cannot execute actions.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="command-section" id="testing" aria-labelledby="testing-title">
-      <div class="section-heading"><span class="section-icon" aria-hidden="true">03</span><div><h2 id="testing-title">Test safely</h2><p>Typed interpretation and a real microphone are different checks.</p></div></div>
+      <div class="section-heading"><span class="section-icon" aria-hidden="true">04</span><div><h2 id="testing-title">Test safely</h2><p>Typed interpretation and a real microphone are different checks.</p></div></div>
       <div class="card-grid">
         <article class="command-card"><h3>Free phrase tester</h3><p>In Voice Controls, open “Try a phrase.” The private “Test phrase” panel interprets typed wording only. It cannot arm, stage, confirm, capture a playback target or run an action. It is not a microphone test.</p><p class="fine-print">Enter the request after the wake phrase. Temporary test input and evidence clear when you leave or hide the tab. Switching back never arms anything automatically.</p></article>
         <article class="command-card"><h3>Optional AI preview</h3><p>“Preview with AI” is a separate explicit interpretation test and may use tokens. It still cannot execute or capture targets. Familiar exact commands use the free grammar; transcription and wake-address checks can still have their usual costs.</p><p class="fine-print">Enabled natural interpretation may classify ordinary addressed turns when optional actions are permitted, adding bounded latency/tokens before a normal reply.</p></article>
@@ -139,7 +162,7 @@
         <li>Multiple commands in one request are not supported. Say them separately.</li>
         <li>Spoken “what can I say?” help is planned, not a shipped control command.</li>
         <li>No arbitrary player URLs, volume/seek controls, shell commands or general model tools are authorized by these requests.</li>
-        <li>On ambiguity, restate the full request with “Hey Finn.” On uncertainty, check the relevant dashboard before trying again.</li>
+        <li>Only a separately enabled scoped Night Sky question can accept its offered on/off answer. For other ambiguity, restate the full request with “Hey Finn.” On uncertainty, check the relevant dashboard before trying again.</li>
       </ul>
     </section>
   </main>
