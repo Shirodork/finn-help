@@ -45,5 +45,10 @@ arming, confirmation and interpretation-only testing without publishing runtime
 state, private configuration, dashboard/token URLs, transcripts or hidden
 operator capabilities. Clearly separate optional conversational follow-ups from
 action permissions, and planned multiple commands from available controls. The
+separate scoped Night Sky clarification offers only on/off, once, without
+renewing the original request deadline or bypassing confirmation. It is not
+action authority for ordinary conversational follow-ups. Keep its examples and
+deployment prerequisites aligned with the core release; do not publish private
+configuration or runtime question state. The
 voice page is static and reuses `styles.css`; it
 does not need the chat search script or external services.
