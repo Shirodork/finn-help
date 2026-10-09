@@ -45,7 +45,11 @@ arming, confirmation and interpretation-only testing without publishing runtime
 state, private configuration, dashboard/token URLs, transcripts or hidden
 operator capabilities. Clearly separate optional conversational follow-ups from
 action permissions, and the one separately enabled Night Sky-on → Finn AFK-on
-routine from other planned command chains. That routine uses one immutable
+routine and its separately enabled recorded-break return from other planned
+command chains. Return permission must be enabled before the break; only actual
+new successful changes are owned, never pre-existing or later manual choices.
+Its record is process-local, fresh wake/arming/confirmation still apply, and
+reveal-drain acceptance is not completed restoration. That routine uses one immutable
 confirmation, preflights both parts, reports partial outcomes without automatic
 rollback, and never replays after restart. Keep this documentation companion
 unmerged until its core release is approved. The
