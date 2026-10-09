@@ -44,7 +44,11 @@ examples are never viewer-chat commands. Explain independent permissions,
 arming, confirmation and interpretation-only testing without publishing runtime
 state, private configuration, dashboard/token URLs, transcripts or hidden
 operator capabilities. Clearly separate optional conversational follow-ups from
-action permissions, and planned multiple commands from available controls. The
+action permissions, and the one separately enabled Night Sky-on → Finn AFK-on
+routine from other planned command chains. That routine uses one immutable
+confirmation, preflights both parts, reports partial outcomes without automatic
+rollback, and never replays after restart. Keep this documentation companion
+unmerged until its core release is approved. The
 separate scoped Night Sky clarification offers only on/off, once, without
 renewing the original request deadline or bypassing confirmation. It is not
 action authority for ordinary conversational follow-ups. Keep its examples and
