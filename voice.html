@@ -26,11 +26,11 @@
         <p class="eyebrow">STREAMER / OPERATOR MICROPHONE</p>
         <h1>Say it to Finn.<br><span>Know what changes.</span></h1>
         <p class="hero-intro">These are spoken operator requests, not Twitch chat commands. Viewers cannot run them by pasting the examples into chat.</p>
-        <p class="search-hint">Updated 8 October 2026 · Includes optional conversation and separate Night Sky on/off clarification. Deployment and permissions may differ on each channel.</p>
+        <p class="search-hint">Updated 9 October 2026 · Includes optional conversation, separate Night Sky on/off clarification and one opt-in Night Sky + Finn takeover routine. Deployment and permissions may differ on each channel.</p>
         <p><a href="#before-use">Before using controls</a> · <a href="#commands">What can I say?</a> · <a href="#follow-ups">Keep talking</a> · <a href="#clarification">Answer a choice</a> · <a href="#testing">Test safely</a></p>
       </div>
       <div class="hero-card" aria-label="Voice request example">
-        <p class="hero-card-label">ONE REQUEST AT A TIME</p>
+        <p class="hero-card-label">ONE REQUEST · CLEAR PERMISSIONS</p>
         <div class="chat-bubble"><span class="chat-name">Operator says</span><code>Hey Finn, pause the music.</code></div>
         <div class="chat-bubble bot"><span class="chat-name">If confirmation is enabled</span><span>Wait for the proposal, then say “Hey Finn, confirm that.”</span></div>
       </div>
@@ -43,7 +43,7 @@
       <h2 id="before-use-title">Enable deliberately. Arm separately.</h2>
       <div class="quick-grid">
         <article><span class="step">1</span><h3>Check the microphone</h3><p>Use the updated, authenticated operator microphone. Begin with “Hey Finn” or the channel's configured wake phrase. A normal question still uses ordinary conversation.</p></article>
-        <article><span class="step">2</span><h3>Choose permissions and arm</h3><p>Open the private dashboard's Voice Controls tab. Voice controls and optional bookmark, song-skip, playback and quiet permissions must be enabled separately. Enabling does not arm anything; explicitly arm the current microphone session.</p></article>
+        <article><span class="step">2</span><h3>Choose permissions and arm</h3><p>Open the private dashboard's Voice Controls tab. Voice controls and optional bookmark, song-skip, playback, quiet and takeover-routine permissions must be enabled separately. Enabling does not arm anything; explicitly arm the current microphone session.</p></article>
         <article><span class="step">3</span><h3>Respect confirmation</h3><p>Night Sky changes and enabled media/quiet actions use the configured second-confirmation preference. Bookmarks are immediate and skip only that extra confirmation.</p></article>
         <article><span class="step">4</span><h3>Protect the room</h3><p>Authentication identifies the microphone, not the speaker. Anyone audible to an armed mic may request a supported action. Use isolated audio/headphones and disarm outside intentional use.</p></article>
       </div>
@@ -64,6 +64,14 @@
           <div class="command-list"><code>Hey Finn, confirm that.</code><code>Hey Finn, cancel that.</code></div>
           <p>Confirm only the current unexpired proposal. Cancel pending or unstarted work; it is not rollback for a change already sent. Existing “confirm night sky” and “cancel night sky” wording remains supported.</p>
           <p class="fine-print">Use a fresh wake for confirmation or a full corrected request. Bare “yes,” “on” or “off” cannot confirm a proposal or change a setting through the conversational window.</p>
+        </article>
+        <article class="command-card" id="night-sky-takeover">
+          <h3>Night Sky + Finn takeover</h3>
+          <div class="command-list"><code>Hey Finn, activate Night Sky and take over.</code><code>Hey Finn, I'll be right back, activate Night Sky and take over.</code></div>
+          <p>Separately enable this routine in Voice Controls; it defaults OFF. It checks both services before changing anything, ensures Night Sky is on, then engages Finn's existing AFK mode. One confirmation covers the whole plan when confirmation is enabled.</p>
+          <p>AFK may start Finn's autonomy, use the configured event-reaction mode and post the normal handoff announcement. Maple is unchanged. Natural surrounding chatter needs natural interpretation Enabled; the complete exact first example uses the free parser.</p>
+          <p class="fine-print">The dashboard shows each step. Both steps share the original 30-second completed-request deadline. If the second step fails or you cancel midway, a completed first step is left alone and reported; there is no automatic undo or restart replay. Check both states before trying again.</p>
+          <p class="fine-print">Night Sky alone does not start AFK. Ending Night Sky does not end AFK; return using the existing Finn AFK dashboard control. This is the only two-action combination: reversed order, AFK-only, extra/unknown steps, quoted/conditional/corrected requests and a combined return routine are not supported.</p>
         </article>
         <article class="command-card" id="bookmarks">
           <h3>Private stream bookmarks</h3>
@@ -88,7 +96,7 @@
           <p>The dedicated Voice Controls tab brings together action status, permissions, arming, pending proposals, phrase tests and searchable command help. The quiet countdown has a clear-only “Resume Finn comments” button usable without arming.</p>
           <p>Night Sky Protocol reward, music and OBS setup stays in Night Sky. Use the shortcuts between the two tabs; changing tabs never enables, arms or executes an action.</p>
           <p>Disarming alone leaves an accepted quiet timer intact. Quiet expiry, resume, disabling its permission, stream end, a new session or restart clears it without replaying old comments.</p>
-          <p class="fine-print">Media and quiet proposals expire within the original 30-second completed-request window; later interpretation or confirmation cannot extend it. Check status rather than treating a slow HTTP reply as success or failure.</p>
+          <p class="fine-print">Media, quiet and takeover-routine proposals expire within the original 30-second completed-request window; later interpretation or confirmation cannot extend it. Check status rather than treating a slow HTTP reply as success or failure.</p>
         </article>
       </div>
     </section>
@@ -159,7 +167,7 @@
       <div><p class="section-kicker">LIMITS</p><h2 id="limits-title">Still use a fresh wake.</h2></div>
       <ul>
         <li>Wake-free follow-ups are optional conversation only. Commands, confirmation and bookmarks still need a fresh wake.</li>
-        <li>Multiple commands in one request are not supported. Say them separately.</li>
+        <li>The separately enabled Night Sky-on → Finn AFK-on routine is the only two-action exception. Say other commands separately; extra or unsupported steps reject the whole routine.</li>
         <li>Spoken “what can I say?” help is planned, not a shipped control command.</li>
         <li>No arbitrary player URLs, volume/seek controls, shell commands or general model tools are authorized by these requests.</li>
         <li>Only a separately enabled scoped Night Sky question can accept its offered on/off answer. For other ambiguity, restate the full request with “Hey Finn.” On uncertainty, check the relevant dashboard before trying again.</li>
