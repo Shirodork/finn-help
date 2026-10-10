@@ -35,6 +35,17 @@ GitHub Pages is configured to publish from the root of the `main` branch.
 
 ## Updating commands
 
+The approved stream preset companion adds Starting Soon, Crafting Focus,
+Wrap-up and exact recorded-run restoration. Keep it unmerged until its matching
+Finn voice-selection release is approved. The public page describes configurable
+defaults and independent permissions, never actual runtime configuration,
+dashboard URLs, transcripts, run IDs or private control revisions. Presets share
+the dashboard's local phase/quiet ownership, require detected live stream and
+fresh authorized/armed wakes, and keep the existing confirmation preference.
+They do not change OBS/music or end a stream. Restoration preserves later manual
+choices and original quiet deadlines; restart/stream end forgets the record.
+No new scripts, trackers, external assets or chat-search changes are needed.
+
 Read-only capability help is documented separately from action requests. It needs
 an authenticated fresh wake and Runtime Awareness, not arming. The guide publishes
 examples and setup concepts only; no actual local permission/readiness data is

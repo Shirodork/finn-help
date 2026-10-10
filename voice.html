@@ -26,8 +26,8 @@
         <p class="eyebrow">STREAMER / OPERATOR MICROPHONE</p>
         <h1>Say it to Finn.<br><span>Know what changes.</span></h1>
         <p class="hero-intro">These are spoken operator requests, not Twitch chat commands. Viewers cannot run them by pasting the examples into chat.</p>
-        <p class="search-hint">Updated 9 October 2026 · Includes optional conversation, separate Night Sky on/off clarification, opt-in Night Sky + Finn takeover, its recorded-break return, read-only MediaShare/OBS questions and capability help. Deployment and permissions may differ on each channel.</p>
-        <p><a href="#before-use">Before using controls</a> · <a href="#commands">What can I say?</a> · <a href="#follow-ups">Keep talking</a> · <a href="#clarification">Answer a choice</a> · <a href="#capabilities">Ask what Finn can do</a> · <a href="#diagnostics">Ask about a problem</a> · <a href="#testing">Test safely</a></p>
+        <p class="search-hint">Updated 10 October 2026 · Includes optional conversation, Night Sky takeover and recorded return, approved stream presets, read-only MediaShare/OBS questions and capability help. Deployment and permissions may differ on each channel.</p>
+        <p><a href="#before-use">Before using controls</a> · <a href="#commands">What can I say?</a> · <a href="#stream-routines">Stream presets</a> · <a href="#follow-ups">Keep talking</a> · <a href="#clarification">Answer a choice</a> · <a href="#capabilities">Ask what Finn can do</a> · <a href="#diagnostics">Ask about a problem</a> · <a href="#testing">Test safely</a></p>
       </div>
       <div class="hero-card" aria-label="Voice request example">
         <p class="hero-card-label">ONE REQUEST · CLEAR PERMISSIONS</p>
@@ -43,8 +43,8 @@
       <h2 id="before-use-title">Enable deliberately. Arm separately.</h2>
       <div class="quick-grid">
         <article><span class="step">1</span><h3>Check the microphone</h3><p>Use the updated, authenticated operator microphone. Begin with “Hey Finn” or the channel's configured wake phrase. A normal question still uses ordinary conversation.</p></article>
-        <article><span class="step">2</span><h3>Choose permissions and arm</h3><p>Open the private dashboard's Voice Controls tab. Voice controls and optional bookmark, song-skip, playback, quiet, takeover and recorded-break return permissions must be enabled separately. Enable return before starting the break. Enabling does not arm anything; explicitly arm the current microphone session.</p></article>
-        <article><span class="step">3</span><h3>Respect confirmation</h3><p>Night Sky changes and enabled media/quiet actions use the configured second-confirmation preference. Bookmarks are immediate and skip only that extra confirmation.</p></article>
+        <article><span class="step">2</span><h3>Choose permissions and arm</h3><p>Open the private dashboard's Voice Controls tab. Voice controls and optional bookmark, song-skip, playback, quiet, takeover, recorded-break return and stream-preset permissions must be enabled separately. Enable return before starting the break. Enabling does not arm anything; explicitly arm the current microphone session.</p></article>
+        <article><span class="step">3</span><h3>Respect confirmation</h3><p>Night Sky changes, enabled media/quiet actions and approved stream presets/restoration use the configured second-confirmation preference. Bookmarks are immediate and skip only that extra confirmation.</p></article>
         <article><span class="step">4</span><h3>Protect the room</h3><p>Authentication identifies the microphone, not the speaker. Anyone audible to an armed mic may request a supported action. Use isolated audio/headphones and disarm outside intentional use.</p></article>
       </div>
     </section>
@@ -86,6 +86,16 @@
           <p>With bookmark permission and arming, save a private Scrapbook moment immediately during a real active stream. The optional note stays private and is not read aloud in the acknowledgement.</p>
           <p class="fine-print">The timestamp is when the completed request is admitted, not an inferred earlier highlight. An uncertain save may offer an explicit same-bookmark retry for the original short window; after expiry or restart, inspect Scrapbook. No automatic retry.</p>
         </article>
+        <article class="command-card" id="stream-routines">
+          <h3>Approved stream presets</h3>
+          <div class="command-list"><code>Hey Finn, start the Starting Soon routine.</code><code>Hey Finn, start Crafting Focus.</code><code>Hey Finn, start the Wrap-up routine.</code><code>Hey Finn, restore my stream routine.</code></div>
+          <p>Review these presets in Voice Controls, refresh routine status and use “Enable routines” for new runs, then separately enable “Voice approved stream routines.” It defaults OFF. Use your authenticated, armed microphone and a fresh wake during a detected live stream. Enabling a switch never starts a preset.</p>
+          <p><strong>Starting Soon</strong> defaults to starting-soon conversation context and ten minutes of Finn-only quiet. <strong>Crafting Focus</strong> defaults to main-stream context and 25 minutes of quiet. <strong>Wrap-up</strong> defaults to outro context and keeps the current quiet setting. Your operator can configure those effects.</p>
+          <p>These change conversation context and unsolicited Finn comments—not OBS scenes, music, direct answers, Maple or DnD. Wrap-up does not end the stream, and Starting Soon requires the stream already detected live. Offline/LAB testing alone does not authorize a run. The standalone quiet-command permission is not needed for a reviewed preset's effects.</p>
+          <p>With confirmation enabled, review the proposed changes, then say “Hey Finn, confirm that.” With it disabled, a valid fresh request applies after checks. Exact phrases use the free parser; optional natural interpretation may select only a supported preset, not invent steps or undo targets.</p>
+          <p class="fine-print">One active record is shared with the dashboard. Restore changes only phase/quiet still owned by that run, preserves later manual choices and keeps an old quiet timer's original deadline. It is not arbitrary undo. Turning the main routine switch OFF blocks new runs but still allows owned restoration with voice permission ON in the same live stream. Stream end/restart forgets the record; there is no automatic replay or retry.</p>
+          <p class="fine-print">The original 30-second completed-request deadline covers interpretation, confirmation and execution. “Cancel that” cancels pending work, not applied effects. “I'm back” still means the separate Night Sky/AFK recorded break. Wake-free conversation, extra commands and unknown presets cannot authorize these changes. Check dashboard state after an uncertain result.</p>
+        </article>
         <article class="command-card" id="media">
           <h3>Skip, pause or resume music</h3>
           <div class="command-list"><code>Hey Finn, skip this song.</code><code>Hey Finn, pause the music.</code><code>Hey Finn, resume the music.</code></div>
@@ -103,7 +113,7 @@
           <p>The dedicated Voice Controls tab brings together action status, permissions, arming, pending proposals, phrase tests and searchable command help. The quiet countdown has a clear-only “Resume Finn comments” button usable without arming.</p>
           <p>Night Sky Protocol reward, music and OBS setup stays in Night Sky. Use the shortcuts between the two tabs; changing tabs never enables, arms or executes an action.</p>
           <p>Disarming alone leaves an accepted quiet timer intact. Quiet expiry, resume, disabling its permission, stream end, a new session or restart clears it without replaying old comments.</p>
-          <p class="fine-print">Media, quiet, takeover and recorded-break return proposals expire within the original 30-second completed-request window; later interpretation or confirmation cannot extend it. Check status rather than treating a slow HTTP reply as success or failure.</p>
+          <p class="fine-print">Media, quiet, takeover, recorded-break return and stream-preset/restore proposals expire within the original 30-second completed-request window; later interpretation or confirmation cannot extend it. Check status rather than treating a slow HTTP reply as success or failure.</p>
         </article>
       </div>
     </section>
@@ -125,7 +135,7 @@
         </article>
         <article class="command-card" id="follow-up-actions">
           <h3>Conversation only</h3>
-          <p>Ask another question or keep bantering. To change Night Sky, music or quiet settings, save a bookmark, or confirm an action, say a fresh “Hey Finn” and follow the usual permission, arming and confirmation rules.</p>
+          <p>Ask another question or keep bantering. To change Night Sky, music or quiet settings, select/restore a stream preset, save a bookmark, or confirm an action, say a fresh “Hey Finn” and follow the usual permission, arming and confirmation rules.</p>
           <p class="fine-print">An action-shaped follow-up gets a reminder to use the wake phrase, not permission to act. Authentication identifies the microphone, not who is speaking; room or chat-directed speech during the window can be mistaken for a follow-up. Use isolated audio/headphones and disable the feature if it gets in the way.</p>
         </article>
         <article class="command-card" id="follow-up-end">
@@ -194,7 +204,7 @@
       <div><p class="section-kicker">LIMITS</p><h2 id="limits-title">Still use a fresh wake.</h2></div>
       <ul>
         <li>Wake-free follow-ups are optional conversation only. Commands, confirmation and bookmarks still need a fresh wake.</li>
-        <li>The separately enabled Night Sky-on → Finn AFK-on routine and its recorded-break return are the only combined routines. Say other commands separately; extra or unsupported steps reject the whole routine.</li>
+        <li>Only the approved stream presets and the separate Night Sky-on → Finn AFK-on routine and its recorded-break return combine effects. Say other commands separately; extra or unsupported steps reject the whole routine.</li>
         <li>“Hey Finn, what can you do?” asks about shipped operator voice actions, not every public chat command. Help needs a fresh authenticated wake but no action arming.</li>
         <li>No arbitrary player URLs, volume/seek controls, shell commands or general model tools are authorized by these requests.</li>
         <li>Only a separately enabled scoped Night Sky question can accept its offered on/off answer. For other ambiguity, restate the full request with “Hey Finn.” On uncertainty, check the relevant dashboard before trying again.</li>
