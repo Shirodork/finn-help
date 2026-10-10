@@ -35,6 +35,14 @@ GitHub Pages is configured to publish from the root of the `main` branch.
 
 ## Updating commands
 
+The voice reliability companion documents the optional Always armed preference
+and either-order Night Sky + takeover wording with “and”. Keep it aligned with
+its matching Finn release: manual arming remains the default, explicit Disarm
+pauses automatic arming for the bot run, and readiness, authentication, a fresh
+wake, individual permissions and confirmation remain required. Mention order
+does not change the approved Night Sky-first plan; explicit contrary sequencing
+is not silently reordered. No runtime data or private URLs are published here.
+
 The approved stream preset companion adds Starting Soon, Crafting Focus,
 Wrap-up and exact recorded-run restoration. The optional scene/music extension
 keeps those four voice phrases and must remain unmerged until its matching core
