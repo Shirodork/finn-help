@@ -35,6 +35,13 @@ GitHub Pages is configured to publish from the root of the `main` branch.
 
 ## Updating commands
 
+Read-only capability help is documented separately from action requests. It needs
+an authenticated fresh wake and Runtime Awareness, not arming. The guide publishes
+examples and setup concepts only; no actual local permission/readiness data is
+published on this site. Spoken help still appears in stream audio/captions, but
+not Twitch echo, shared assistant history or co-host seeds. It opens no follow-up
+window. Keep this companion unmerged until its matching Finn release is approved.
+
 Keep every alias beside its primary command, use plain language, and preserve
 the existing access labels. After editing, check search, keyboard focus,
 small-screen layout, internal anchors, and the empty-results state.
