@@ -26,8 +26,8 @@
         <p class="eyebrow">STREAMER / OPERATOR MICROPHONE</p>
         <h1>Say it to Finn.<br><span>Know what changes.</span></h1>
         <p class="hero-intro">These are spoken operator requests, not Twitch chat commands. Viewers cannot run them by pasting the examples into chat.</p>
-        <p class="search-hint">Updated 9 October 2026 · Includes optional conversation, separate Night Sky on/off clarification, opt-in Night Sky + Finn takeover, its recorded-break return and read-only MediaShare/OBS questions. Deployment and permissions may differ on each channel.</p>
-        <p><a href="#before-use">Before using controls</a> · <a href="#commands">What can I say?</a> · <a href="#follow-ups">Keep talking</a> · <a href="#clarification">Answer a choice</a> · <a href="#diagnostics">Ask about a problem</a> · <a href="#testing">Test safely</a></p>
+        <p class="search-hint">Updated 9 October 2026 · Includes optional conversation, separate Night Sky on/off clarification, opt-in Night Sky + Finn takeover, its recorded-break return, read-only MediaShare/OBS questions and capability help. Deployment and permissions may differ on each channel.</p>
+        <p><a href="#before-use">Before using controls</a> · <a href="#commands">What can I say?</a> · <a href="#follow-ups">Keep talking</a> · <a href="#clarification">Answer a choice</a> · <a href="#capabilities">Ask what Finn can do</a> · <a href="#diagnostics">Ask about a problem</a> · <a href="#testing">Test safely</a></p>
       </div>
       <div class="hero-card" aria-label="Voice request example">
         <p class="hero-card-label">ONE REQUEST · CLEAR PERMISSIONS</p>
@@ -160,6 +160,16 @@
       </div>
     </section>
 
+    <section class="command-section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="section-heading"><span class="section-icon" aria-hidden="true">HELP</span><div><h2 id="capabilities-title">Ask what Finn can do</h2><p>Learn the difference between a supported control and one ready to use.</p></div></div>
+      <div class="card-grid">
+        <article class="command-card"><h3>Get the short tour</h3><div class="command-list"><code>Hey Finn, what can you do?</code></div><p>Finn can explain his shipped operator voice controls, their permissions and current local prerequisites. This is a limited voice-control guide, not a list of every feature.</p></article>
+        <article class="command-card"><h3>Ask about one area</h3><div class="command-list"><code>Hey Finn, what do I need to enable to let you control music?</code><code>Hey Finn, can you save stream bookmarks?</code></div><p>Get setup guidance without enabling, arming, confirming or running anything. Help does not replace or extend a pending action. “Can you pause the music?” is still a request to act, not a help question.</p></article>
+        <article class="command-card"><h3>No action arming needed</h3><p>Use the authenticated updated microphone, a fresh wake, default Finn persona and Runtime Awareness ON, while LIVE or deliberately testing in LAB. Help works with action controls disabled or disarmed. It does not add speaker recognition, wake-free control, arbitrary OBS changes or Spotify commands.</p></article>
+        <article class="command-card"><h3>Preview first, for free</h3><p>The private Voice Controls tab's “What Finn can do” preview shows the exact allowed catalog and current prerequisites without AI, microphone admission or action. Cached readiness is not a provider test or a promise an action will succeed. Spoken answers still use normal wake/transcription/reply/voice costs, but no extra action-interpreter call.</p><p class="fine-print">Help answers use audio and captions, without Twitch chat echo, Maple banter or shared assistant history. Audio/captions still appear on stream. Help does not open a follow-up window; ask again with a fresh wake. Do not show private live permission previews on stream. No live settings or private dashboard links are published in this guide. Runtime Awareness OFF drops explicit capability questions.</p></article>
+      </div>
+    </section>
+
     <section class="command-section" id="diagnostics" aria-labelledby="diagnostics-title">
       <div class="section-heading"><span class="section-icon" aria-hidden="true">04</span><div><h2 id="diagnostics-title">Ask about a problem.</h2><p>Read-only clues, not automatic repairs.</p></div></div>
       <div class="card-grid">
@@ -185,7 +195,7 @@
       <ul>
         <li>Wake-free follow-ups are optional conversation only. Commands, confirmation and bookmarks still need a fresh wake.</li>
         <li>The separately enabled Night Sky-on → Finn AFK-on routine and its recorded-break return are the only combined routines. Say other commands separately; extra or unsupported steps reject the whole routine.</li>
-        <li>Spoken “what can I say?” help is planned, not a shipped control command.</li>
+        <li>“Hey Finn, what can you do?” asks about shipped operator voice actions, not every public chat command. Help needs a fresh authenticated wake but no action arming.</li>
         <li>No arbitrary player URLs, volume/seek controls, shell commands or general model tools are authorized by these requests.</li>
         <li>Only a separately enabled scoped Night Sky question can accept its offered on/off answer. For other ambiguity, restate the full request with “Hey Finn.” On uncertainty, check the relevant dashboard before trying again.</li>
       </ul>
