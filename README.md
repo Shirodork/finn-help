@@ -60,3 +60,11 @@ deployment prerequisites aligned with the core release; do not publish private
 configuration or runtime question state. The
 voice page is static and reuses `styles.css`; it
 does not need the chat search script or external services.
+
+Read-only MediaShare/OBS questions require Runtime Awareness plus the existing
+authenticated, armed default-Finn microphone controls and a fresh wake. They
+explain selected cached coded evidence, never grant repair/probe authority,
+consume pending confirmations or prove actual stream output. Their private
+Doctor preview is free; a spoken reply retains usual voice/model costs. Keep
+this documentation companion unmerged until the scoped-diagnostics core release
+is approved. No runtime evidence, tokens or private URLs belong on this site.

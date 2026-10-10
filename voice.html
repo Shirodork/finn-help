@@ -26,8 +26,8 @@
         <p class="eyebrow">STREAMER / OPERATOR MICROPHONE</p>
         <h1>Say it to Finn.<br><span>Know what changes.</span></h1>
         <p class="hero-intro">These are spoken operator requests, not Twitch chat commands. Viewers cannot run them by pasting the examples into chat.</p>
-        <p class="search-hint">Updated 9 October 2026 · Includes optional conversation, separate Night Sky on/off clarification, opt-in Night Sky + Finn takeover and its recorded-break return. Deployment and permissions may differ on each channel.</p>
-        <p><a href="#before-use">Before using controls</a> · <a href="#commands">What can I say?</a> · <a href="#follow-ups">Keep talking</a> · <a href="#clarification">Answer a choice</a> · <a href="#testing">Test safely</a></p>
+        <p class="search-hint">Updated 9 October 2026 · Includes optional conversation, separate Night Sky on/off clarification, opt-in Night Sky + Finn takeover, its recorded-break return and read-only MediaShare/OBS questions. Deployment and permissions may differ on each channel.</p>
+        <p><a href="#before-use">Before using controls</a> · <a href="#commands">What can I say?</a> · <a href="#follow-ups">Keep talking</a> · <a href="#clarification">Answer a choice</a> · <a href="#diagnostics">Ask about a problem</a> · <a href="#testing">Test safely</a></p>
       </div>
       <div class="hero-card" aria-label="Voice request example">
         <p class="hero-card-label">ONE REQUEST · CLEAR PERMISSIONS</p>
@@ -160,8 +160,18 @@
       </div>
     </section>
 
+    <section class="command-section" id="diagnostics" aria-labelledby="diagnostics-title">
+      <div class="section-heading"><span class="section-icon" aria-hidden="true">04</span><div><h2 id="diagnostics-title">Ask about a problem.</h2><p>Read-only clues, not automatic repairs.</p></div></div>
+      <div class="card-grid">
+        <article class="command-card"><h3>MediaShare</h3><div class="command-list"><code>Hey Finn, why isn't the video playing?</code><code>Hey Finn, check MediaShare.</code></div><p>Finn can explain recent coded browser reports and cached playback state, then suggest a manual check. He does not skip, restart, run a playback test or change settings.</p><p class="fine-print">One topic per question. A browser report can concern an older song or a monitor; it is a clue, not a confirmed cause or proof of stream output.</p></article>
+        <article class="command-card"><h3>OBS</h3><div class="command-list"><code>Hey Finn, is OBS connected?</code></div><p>Finn can describe the last known connection observation and recent coded warnings. Missing evidence stays unknown; a connected source does not prove visible video or audible sound.</p><p class="fine-print">No scene switch, probe or repair is authorized by this question. Check the actual Program scene and mixer yourself.</p></article>
+        <article class="command-card"><h3>Before asking</h3><p>Keep Runtime Awareness enabled, use the default Finn persona, and connect your authenticated microphone with voice controls enabled and armed. Use a fresh wake phrase; ordinary wake-free follow-ups do not request diagnostics.</p><p class="fine-print">No confirmation is needed for the read-only question. An existing pending action remains pending. If controls disconnect, pause, disarm or lose permission, the diagnostic is dropped; re-arm before repeating.</p></article>
+        <article class="command-card"><h3>Free preview, normal reply cost</h3><p>Doctor's “What Finn can diagnose” card lets you choose MediaShare or OBS and preview the permitted evidence for free. It cannot arm controls, investigate or execute an action.</p><p class="fine-print">The spoken question uses one normal Finn response, with tools disabled for that turn and no extra diagnostic model. Usual wake, transcription, response and voice costs remain. Raw logs and private settings are not added to the diagnostic evidence.</p></article>
+      </div>
+    </section>
+
     <section class="command-section" id="testing" aria-labelledby="testing-title">
-      <div class="section-heading"><span class="section-icon" aria-hidden="true">04</span><div><h2 id="testing-title">Test safely</h2><p>Typed interpretation and a real microphone are different checks.</p></div></div>
+      <div class="section-heading"><span class="section-icon" aria-hidden="true">05</span><div><h2 id="testing-title">Test safely</h2><p>Typed interpretation and a real microphone are different checks.</p></div></div>
       <div class="card-grid">
         <article class="command-card"><h3>Free phrase tester</h3><p>In Voice Controls, open “Try a phrase.” The private “Test phrase” panel interprets typed wording only. It cannot arm, stage, confirm, capture a playback target or run an action. It is not a microphone test.</p><p class="fine-print">Enter the request after the wake phrase. Temporary test input and evidence clear when you leave or hide the tab. Switching back never arms anything automatically.</p></article>
         <article class="command-card"><h3>Optional AI preview</h3><p>“Preview with AI” is a separate explicit interpretation test and may use tokens. It still cannot execute or capture targets. Familiar exact commands use the free grammar; transcription and wake-address checks can still have their usual costs.</p><p class="fine-print">Enabled natural interpretation may classify ordinary addressed turns when optional actions are permitted, adding bounded latency/tokens before a normal reply.</p></article>
