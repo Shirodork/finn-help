@@ -36,14 +36,25 @@ GitHub Pages is configured to publish from the root of the `main` branch.
 ## Updating commands
 
 The approved stream preset companion adds Starting Soon, Crafting Focus,
-Wrap-up and exact recorded-run restoration. Keep it unmerged until its matching
-Finn voice-selection release is approved. The public page describes configurable
+Wrap-up and exact recorded-run restoration. The optional scene/music extension
+keeps those four voice phrases and must remain unmerged until its matching core
+release is approved. The public page describes configurable
 defaults and independent permissions, never actual runtime configuration,
 dashboard URLs, transcripts, run IDs or private control revisions. Presets share
-the dashboard's local phase/quiet ownership, require detected live stream and
+the dashboard's phase/quiet/optional scene/music ownership, require detected live stream and
 fresh authorized/armed wakes, and keep the existing confirmation preference.
-They do not change OBS/music or end a stream. Restoration preserves later manual
-choices and original quiet deadlines; restart/stream end forgets the record.
+Scene and MediaShare playlist steps are saved explicitly per preset and default
+blank/OFF. They are not arbitrary spoken scene/URL commands and never end a
+stream. Readiness refresh and saving execute nothing; preview can import/warm
+the first song without playing it. Apply phase/quiet/music/scene, restore in
+reverse while preserving later manual choices and original quiet deadlines.
+The same primary MediaShare source must remain available/audible in every
+approved scene. Original voice authority still expires at 30 seconds, including
+cold playlist preparation; there is no automatic retry/renewal.
+Restart/stream end forgets process-local routine ownership, while held routine
+music can remain durable. Explain separate private reviewed offline recovery
+without publishing IDs or evidence: only the orphaned routine playlist, no
+unrelated Night Sky recovery and no automatic OBS restoration after restart.
 No new scripts, trackers, external assets or chat-search changes are needed.
 
 Read-only capability help is documented separately from action requests. It needs
