@@ -21,6 +21,14 @@ empty results. Keep the site static and public-safe.
 
 ## Updating commands
 
+Fresh Workshop investigations are a separate default-OFF voice permission.
+Keep their fixed three recipes and immediate read-only launch distinct from
+cached conversational diagnostics and separately paid AI analysis. Authentication,
+fresh wake, arming, default persona, live/LAB and enabled private dashboard remain
+required. Normal wake/STT/optional TTS costs remain; preserve no-repair and
+cancellation/draining language. Publish this companion only after its matching
+Finn core PR is approved and merged. Do not put these maintenance notes in README.
+
 The voice reliability companion documents the optional Always armed preference
 and either-order Night Sky + takeover wording with “and”. Keep it aligned with
 its matching Finn release: manual arming remains the default, explicit Disarm
